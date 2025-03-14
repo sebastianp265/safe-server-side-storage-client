@@ -1,0 +1,34 @@
+{
+  "name": "@sebastianp265/safe-server-side-storage-client",
+  "version": "0.0.0",
+  "description": "Library for Confidential Server-Side Message Storage Using the Labyrinth Protocol",
+  "main": "index.ts",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastianp265/safe-server-side-storage-client.git"
+  },
+  "keywords": [
+    "communication",
+    "cybersecurity",
+    "confidentiality",
+    "privacy",
+    "instant",
+    "messenger",
+    "encryption",
+    "Labyrinth",
+    "protocol"
+  ],
+  "author": "Sebastian Pawliński",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebastianp265/safe-server-side-storage-client/issues"
+  },
+  "homepage": "https://github.com/sebastianp265/safe-server-side-storage-client#readme",
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  }
+}
