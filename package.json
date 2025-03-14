@@ -1,15 +1,15 @@
 {
   "name": "@sebastianp265/safe-server-side-storage-client",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Library for Confidential Server-Side Message Storage Using the Labyrinth Protocol",
-  "main": "index.ts",
+  "main": "src/index.ts",
+  "files": [
+    "/src"
+  ],
   "scripts": {
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
-  "files": [
-    "/src"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sebastianp265/safe-server-side-storage-client.git"

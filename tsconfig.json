@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
+    "module": "NodeNext",
+    "declaration": true,
+    "emitDeclarationOnly": true,
     "allowImportingTsExtensions": true,
     "baseUrl": "./src",
     "paths": {
@@ -12,5 +16,11 @@
       "ES2020"
     ],
     "moduleResolution": "nodenext"
-  }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
