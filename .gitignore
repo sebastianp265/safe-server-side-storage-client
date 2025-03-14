@@ -2,3 +2,5 @@
 node_modules
 *.iml
 coverage
+dist/*
+!dist/package.json
