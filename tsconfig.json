@@ -7,7 +7,7 @@
       "es2023"
     ],
     "module": "NodeNext",
-    "outDir": "./dist",
+    "outDir": "./",
     "resolveJsonModule": true,
     "rewriteRelativeImportExtensions": true,
     "target": "es2022"
