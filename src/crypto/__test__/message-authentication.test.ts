@@ -1,5 +1,5 @@
-import { asciiStringToBytes, random } from "../../../utils";
-import { mac } from "../../../message-authentication";
+import { asciiStringToBytes, random } from "../utils";
+import { mac } from "../message-authentication";
 import { describe, expect, test } from "vitest";
 
 describe("message authentication", () => {

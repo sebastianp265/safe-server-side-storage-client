@@ -5,3 +5,4 @@ coverage
 *.iml
 **/**/__test__
 tsconfig.json
+.prettierrc

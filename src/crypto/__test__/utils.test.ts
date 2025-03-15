@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { asciiStringToBytes, bytesToAsciiString } from "../../../utils";
+import { asciiStringToBytes, bytesToAsciiString } from "../utils";
 
 describe("utils test", () => {
     test("Converting all possible bytes to ascii string is reversible", () => {

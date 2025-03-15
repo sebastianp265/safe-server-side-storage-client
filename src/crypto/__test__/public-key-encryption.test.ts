@@ -1,10 +1,10 @@
-import { asciiStringToBytes, random } from "../../../utils";
-import { KEY_LENGTH_BYTES } from "../../../key-derivation";
-import { generateKeyPair } from "../../../keys";
+import { asciiStringToBytes, random } from "../utils";
+import { KEY_LENGTH_BYTES } from "../key-derivation";
+import { generateKeyPair } from "../keys";
 import {
     labyrinth_hpke_decrypt,
     labyrinth_hpke_encrypt,
-} from "../../../public-key-encryption";
+} from "../public-key-encryption";
 import { expect, test } from "vitest";
 
 test("sender encrypts the message and recipient decrypts it correctly", async () => {

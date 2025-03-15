@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
-import { generateKeyPair } from "../../../keys";
-import { asciiStringToBytes } from "../../../utils";
+import { generateKeyPair } from "../keys";
+import { asciiStringToBytes } from "../utils";
 
 describe("signing data with montgomery curve keypair", () => {
     test("should verify correctly after signing random message", () => {

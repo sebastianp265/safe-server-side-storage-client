@@ -1,9 +1,9 @@
 import { describe, expect, test } from "vitest";
-import { asciiStringToBytes, random } from "../../../utils";
+import { asciiStringToBytes, random } from "../utils";
 import {
     decrypt,
     encryptWithRandomNonce,
-} from "../../../authenticated-symmetric-encryption";
+} from "../authenticated-symmetric-encryption";
 
 describe("authenticated symmetric encryption", () => {
     test("should get the same message after encryption and decryption with same keys and aad", async () => {
