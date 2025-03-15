@@ -1,6 +1,6 @@
-import { cryptoAssert, random } from "@/crypto/utils.ts";
 import { gcm } from "@noble/ciphers/aes";
 import { concatBytes } from "@noble/ciphers/utils";
+import { cryptoAssert, random } from "./utils";
 
 export const NONCE_LENGTH = 12;
 

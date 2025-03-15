@@ -1,11 +1,11 @@
-import { kdfOneKey, KEY_LENGTH_BYTES } from "@/crypto/key-derivation.ts";
+import { generateKeyPair, PrivateKey, PublicKey } from "./keys";
+import { concat, cryptoAssert } from "./utils";
+import { kdfOneKey, KEY_LENGTH_BYTES } from "./key-derivation";
 import {
     decrypt,
     encrypt,
     NONCE_LENGTH,
-} from "@/crypto/authenticated-symmetric-encryption.ts";
-import { generateKeyPair, PrivateKey, PublicKey } from "@/crypto/keys.ts";
-import { concat, cryptoAssert } from "@/crypto/utils.ts";
+} from "./authenticated-symmetric-encryption";
 
 export function labyrinth_hpke_encrypt(
     recipient_enc_pub: PublicKey,

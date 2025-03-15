@@ -1,11 +1,10 @@
+import { PrivateKey, PublicKey } from "../../crypto/keys";
 import {
     CommonPrivateKeyBundle,
     CommonPublicKeyBundle,
     CommonPublicKeyBundleSerialized,
-} from "@/device/key-bundle/DeviceAndVirtualDeviceCommonKeyBundle.ts";
-import { PrivateKey, PublicKey } from "@/crypto/keys.ts";
-import { BytesSerializer } from "@/BytesSerializer.ts";
-import { bytesSerializerProvider } from "@/BytesSerializerProvider.ts";
+} from "./DeviceAndVirtualDeviceCommonKeyBundle";
+import { bytesSerializerProvider } from "../../BytesSerializerProvider";
 
 export type DeviceKeyBundleSerialized = {
     priv: DevicePrivateKeyBundleSerialized;

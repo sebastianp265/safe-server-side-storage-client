@@ -1,20 +1,20 @@
-import { EpochWithoutId } from "@/EpochStorage.ts";
+import { bytesSerializerProvider } from "../../BytesSerializerProvider";
+import { EpochWithoutId } from "../../EpochStorage";
 import {
     VirtualDeviceKeyBundle,
     VirtualDevicePrivateKeyBundle,
     VirtualDevicePublicKeyBundle,
-} from "@/device/key-bundle/VirtualDeviceKeyBundle.ts";
+} from "../key-bundle/VirtualDeviceKeyBundle";
 import {
     decrypt,
     encryptWithRandomNonce,
-} from "@/crypto/authenticated-symmetric-encryption.ts";
+} from "../../crypto/authenticated-symmetric-encryption";
 import {
     asciiStringToBytes,
     bytes_equal,
     bytesToAsciiString,
-} from "@/crypto/utils.ts";
-import { PrivateKey } from "@/crypto/keys.ts";
-import { bytesSerializerProvider } from "@/BytesSerializerProvider.ts";
+} from "../../crypto/utils";
+import { PrivateKey } from "../../crypto/keys";
 
 export type VirtualDeviceEncryptedRecoverySecretsSerialized = {
     encryptedEpochSequenceId: string;

@@ -1,0 +1,7 @@
+*.*ts
+!*.d.*ts
+coverage
+.idea
+*.iml
+**/**/__test__
+tsconfig.json

@@ -1,15 +1,15 @@
-import { Epoch, EpochStorage, EpochStorageSerialized } from "@/EpochStorage.ts";
-import { joinAllEpochs } from "@/phases/join-epoch.ts";
+import { ThisDevice, ThisDeviceSerialized } from "./device/device";
+import { Epoch, EpochStorage, EpochStorageSerialized } from "./EpochStorage";
+import { LabyrinthServerClient } from "./labyrinth-server-client";
+import { VirtualDevice } from "./device/virtual-device/VirtualDevice";
+import { joinAllEpochs } from "./phases/join-epoch";
 import {
     decrypt,
     encryptWithRandomNonce,
-} from "@/crypto/authenticated-symmetric-encryption.ts";
-import { ThisDevice, ThisDeviceSerialized } from "@/device/device.ts";
-import { VirtualDevice } from "@/device/virtual-device/VirtualDevice.ts";
-import { asciiStringToBytes } from "@/crypto/utils.ts";
-import { openNewEpochBasedOnCurrent } from "@/phases/open-new-epoch-based-on-current.ts";
-import { kdfOneKey } from "@/crypto/key-derivation.ts";
-import { LabyrinthServerClient } from "@/labyrinth-server-client.ts";
+} from "./crypto/authenticated-symmetric-encryption";
+import { asciiStringToBytes } from "./crypto/utils";
+import { kdfOneKey } from "./crypto/key-derivation";
+import { openNewEpochBasedOnCurrent } from "./phases/open-new-epoch-based-on-current";
 
 export type LabyrinthSerialized = {
     thisDevice: ThisDeviceSerialized;

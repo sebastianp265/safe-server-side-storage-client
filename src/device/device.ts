@@ -1,19 +1,18 @@
 import {
-    openFirstEpoch,
-    OpenFirstEpochServerClient,
-} from "@/phases/open-first-epoch.ts";
-import {
     DeviceKeyBundle,
     DeviceKeyBundleSerialized,
     DevicePublicKeyBundleSerialized,
-} from "@/device/key-bundle/DeviceKeyBundle.ts";
-import { VirtualDevice } from "@/device/virtual-device/VirtualDevice.ts";
-import { BytesSerializer } from "@/BytesSerializer.ts";
-import { generateEpochDeviceMac } from "@/phases/authenticate-device-to-epoch.ts";
-import { Epoch, EpochStorage } from "@/EpochStorage.ts";
-import { joinAllEpochs } from "@/phases/join-epoch.ts";
-import { LabyrinthServerClient } from "@/labyrinth-server-client.ts";
-import { bytesSerializerProvider } from "@/BytesSerializerProvider.ts";
+} from "./key-bundle/DeviceKeyBundle";
+import { Epoch, EpochStorage } from "../EpochStorage";
+import { LabyrinthServerClient } from "../labyrinth-server-client";
+import { joinAllEpochs } from "../phases/join-epoch";
+import { bytesSerializerProvider } from "../BytesSerializerProvider";
+import { generateEpochDeviceMac } from "../phases/authenticate-device-to-epoch";
+import { VirtualDevice } from "./virtual-device/VirtualDevice";
+import {
+    openFirstEpoch,
+    OpenFirstEpochServerClient,
+} from "../phases/open-first-epoch";
 
 export type AuthenticateDeviceToEpochAndRegisterDeviceResponse = {
     assignedDeviceId: string;

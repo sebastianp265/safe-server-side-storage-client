@@ -2,5 +2,5 @@
 node_modules
 *.iml
 coverage
-dist/*
-!dist/package.json
+**/**/*.d.ts
+**/**/*.d.ts.map

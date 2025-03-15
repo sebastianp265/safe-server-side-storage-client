@@ -1,6 +1,5 @@
-import { PrivateKey, PublicKey } from "@/crypto/keys.ts";
-import { BytesSerializer } from "@/BytesSerializer.ts";
-import { bytesSerializerProvider } from "@/BytesSerializerProvider.ts";
+import { PrivateKey, PublicKey } from "../../crypto/keys";
+import { bytesSerializerProvider } from "../../BytesSerializerProvider";
 
 export class CommonPrivateKeyBundle {
     public readonly deviceKeyPriv: PrivateKey;

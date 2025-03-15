@@ -1,4 +1,4 @@
-import { BytesSerializer } from "@/BytesSerializer.ts";
+import { BytesSerializer } from "./BytesSerializer";
 
 class BytesSerializerProvider {
     private _bytesSerializer: BytesSerializer | null = null;

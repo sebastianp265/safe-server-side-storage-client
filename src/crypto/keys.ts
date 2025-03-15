@@ -1,12 +1,12 @@
-import { bytes_equal, concat, cryptoAssert } from "@/crypto/utils.ts";
 import {
     ed25519,
     edwardsToMontgomeryPriv,
     edwardsToMontgomeryPub,
     x25519,
 } from "@noble/curves/ed25519";
-import { KEY_LENGTH_BYTES } from "@/crypto/key-derivation.ts";
-import { bytesSerializerProvider } from "@/BytesSerializerProvider.ts";
+import { KEY_LENGTH_BYTES } from "./key-derivation";
+import { bytesSerializerProvider } from "../BytesSerializerProvider";
+import { bytes_equal, concat, cryptoAssert } from "./utils";
 
 export function generateKeyPair() {
     const privateKey = PrivateKey.generate();

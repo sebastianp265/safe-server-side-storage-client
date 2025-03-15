@@ -2,7 +2,7 @@ import {
     CommonPrivateKeyBundle,
     CommonPublicKeyBundle,
     CommonPublicKeyBundleSerialized,
-} from "@/device/key-bundle/DeviceAndVirtualDeviceCommonKeyBundle.ts";
+} from "./DeviceAndVirtualDeviceCommonKeyBundle";
 
 export class VirtualDeviceKeyBundle {
     public readonly priv: VirtualDevicePrivateKeyBundle;

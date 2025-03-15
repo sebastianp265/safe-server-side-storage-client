@@ -2,16 +2,15 @@ import {
     decryptVirtualDeviceRecoverySecrets,
     VirtualDeviceEncryptedRecoverySecrets,
     VirtualDeviceEncryptedRecoverySecretsSerialized,
-} from "@/device/virtual-device/VirtualDeviceEncryptedRecoverySecrets.ts";
+} from "./VirtualDeviceEncryptedRecoverySecrets";
 import {
     VirtualDeviceKeyBundle,
     VirtualDevicePublicKeyBundle,
     VirtualDevicePublicKeyBundleSerialized,
-} from "@/device/key-bundle/VirtualDeviceKeyBundle.ts";
-import { BytesSerializer } from "@/BytesSerializer.ts";
-import { asciiStringToBytes, cryptoAssert, random } from "@/crypto/utils.ts";
-import { kdfTwoKeys } from "@/crypto/key-derivation.ts";
-import { bytesSerializerProvider } from "@/BytesSerializerProvider.ts";
+} from "../key-bundle/VirtualDeviceKeyBundle";
+import { bytesSerializerProvider } from "../../BytesSerializerProvider";
+import { asciiStringToBytes, cryptoAssert, random } from "../../crypto/utils";
+import { kdfTwoKeys } from "../../crypto/key-derivation";
 
 export type GetVirtualDeviceRecoverySecretsResponse = {
     epochId: string;

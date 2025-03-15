@@ -1,6 +1,6 @@
-import { asciiStringToBytes } from "@/crypto/utils.ts";
 import { describe, expect, test } from "vitest";
-import { generateKeyPair } from "@/crypto/keys.ts";
+import { generateKeyPair } from "../../../keys";
+import { asciiStringToBytes } from "../../../utils";
 
 describe("signing data with montgomery curve keypair", () => {
     test("should verify correctly after signing random message", () => {

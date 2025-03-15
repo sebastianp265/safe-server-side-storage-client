@@ -1,16 +1,16 @@
-import { kdfOneKey, kdfTwoKeys } from "@/crypto/key-derivation.ts";
-import { labyrinth_hpke_decrypt } from "@/crypto/public-key-encryption.ts";
-import { decrypt } from "@/crypto/authenticated-symmetric-encryption.ts";
-import { Epoch, EpochStorage } from "@/EpochStorage.ts";
 import {
     DevicePublicKeyBundle,
     DevicePublicKeyBundleSerialized,
-} from "@/device/key-bundle/DeviceKeyBundle.ts";
-import { asciiStringToBytes, bytesToAsciiString } from "@/crypto/utils.ts";
-import { AuthenticateDeviceToEpochServerClient } from "@/phases/authenticate-device-to-epoch.ts";
-import { ThisDevice } from "@/device/device.ts";
-import { VirtualDevice } from "@/device/virtual-device/VirtualDevice.ts";
-import { bytesSerializerProvider } from "@/BytesSerializerProvider.ts";
+} from "../device/key-bundle/DeviceKeyBundle";
+import { ThisDevice } from "../device/device";
+import { VirtualDevice } from "../device/virtual-device/VirtualDevice";
+import { Epoch, EpochStorage } from "../EpochStorage";
+import { AuthenticateDeviceToEpochServerClient } from "./authenticate-device-to-epoch";
+import { kdfOneKey, kdfTwoKeys } from "../crypto/key-derivation";
+import { asciiStringToBytes, bytesToAsciiString } from "../crypto/utils";
+import { labyrinth_hpke_decrypt } from "../crypto/public-key-encryption";
+import { bytesSerializerProvider } from "../BytesSerializerProvider";
+import { decrypt } from "../crypto/authenticated-symmetric-encryption";
 
 class InvalidEpochStorageAuthKey extends Error {
     constructor() {

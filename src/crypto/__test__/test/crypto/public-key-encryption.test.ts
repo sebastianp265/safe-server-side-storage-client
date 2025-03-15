@@ -1,11 +1,11 @@
+import { asciiStringToBytes, random } from "../../../utils";
+import { KEY_LENGTH_BYTES } from "../../../key-derivation";
+import { generateKeyPair } from "../../../keys";
 import {
     labyrinth_hpke_decrypt,
     labyrinth_hpke_encrypt,
-} from "@/crypto/public-key-encryption.ts";
-import { asciiStringToBytes, random } from "@/crypto/utils.ts";
-import { generateKeyPair } from "@/crypto/keys.ts";
+} from "../../../public-key-encryption";
 import { expect, test } from "vitest";
-import { KEY_LENGTH_BYTES } from "@/crypto/key-derivation.ts";
 
 test("sender encrypts the message and recipient decrypts it correctly", async () => {
     // psk is shared before encryption

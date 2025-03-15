@@ -1,8 +1,8 @@
-import { kdfOneKey } from "@/crypto/key-derivation.ts";
-import { mac } from "@/crypto/message-authentication.ts";
-import { Epoch, EpochWithoutId } from "@/EpochStorage.ts";
-import { PublicKey } from "@/crypto/keys.ts";
-import { asciiStringToBytes } from "@/crypto/utils.ts";
+import { Epoch, EpochWithoutId } from "../EpochStorage";
+import { PublicKey } from "../crypto/keys";
+import { kdfOneKey } from "../crypto/key-derivation";
+import { asciiStringToBytes } from "../crypto/utils";
+import { mac } from "../crypto/message-authentication";
 
 export type AuthenticateDeviceToEpochRequestBody = {
     epochDeviceMac: string;

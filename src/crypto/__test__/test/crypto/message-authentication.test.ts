@@ -1,7 +1,6 @@
-import { mac } from "@/crypto/message-authentication.ts";
+import { asciiStringToBytes, random } from "../../../utils";
+import { mac } from "../../../message-authentication";
 import { describe, expect, test } from "vitest";
-import { asciiStringToBytes } from "@/crypto/utils.ts";
-import { random } from "@/crypto/utils.ts";
 
 describe("message authentication", () => {
     test("should return the same mac after running twice on the same message", async () => {

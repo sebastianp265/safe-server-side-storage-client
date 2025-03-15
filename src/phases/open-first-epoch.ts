@@ -1,17 +1,17 @@
-import { random } from "@/crypto/utils.ts";
-import { generateEpochDeviceMac } from "@/phases/authenticate-device-to-epoch.ts";
-import { Epoch, EpochWithoutId } from "@/EpochStorage.ts";
-import {
-    DevicePublicKeyBundle,
-    DevicePublicKeyBundleSerialized,
-} from "@/device/key-bundle/DeviceKeyBundle.ts";
-import { VirtualDevice } from "@/device/virtual-device/VirtualDevice.ts";
 import {
     encryptVirtualDeviceRecoverySecrets,
     VirtualDeviceEncryptedRecoverySecretsSerialized,
-} from "@/device/virtual-device/VirtualDeviceEncryptedRecoverySecrets.ts";
-import { VirtualDevicePublicKeyBundleSerialized } from "@/device/key-bundle/VirtualDeviceKeyBundle.ts";
-import { bytesSerializerProvider } from "@/BytesSerializerProvider.ts";
+} from "../device/virtual-device/VirtualDeviceEncryptedRecoverySecrets";
+import { VirtualDevicePublicKeyBundleSerialized } from "../device/key-bundle/VirtualDeviceKeyBundle";
+import {
+    DevicePublicKeyBundle,
+    DevicePublicKeyBundleSerialized,
+} from "../device/key-bundle/DeviceKeyBundle";
+import { VirtualDevice } from "../device/virtual-device/VirtualDevice";
+import { Epoch, EpochWithoutId } from "../EpochStorage";
+import { random } from "../crypto/utils";
+import { generateEpochDeviceMac } from "./authenticate-device-to-epoch";
+import { bytesSerializerProvider } from "../BytesSerializerProvider";
 
 export type OpenFirstEpochBody = {
     virtualDeviceId: string;

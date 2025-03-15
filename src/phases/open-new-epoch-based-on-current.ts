@@ -1,17 +1,17 @@
 import {
     CommonPublicKeyBundle,
     CommonPublicKeyBundleSerialized,
-} from "@/device/key-bundle/DeviceAndVirtualDeviceCommonKeyBundle.ts";
-import { VirtualDevicePublicKeyBundle } from "@/device/key-bundle/VirtualDeviceKeyBundle.ts";
-import { Epoch, EpochWithoutId } from "@/EpochStorage.ts";
-import { ThisDevice } from "@/device/device.ts";
-import { asciiStringToBytes, bytes_equal, random } from "@/crypto/utils.ts";
-import { generateEpochDeviceMac } from "@/phases/authenticate-device-to-epoch.ts";
-import { PublicKey } from "@/crypto/keys.ts";
-import { encryptWithRandomNonce } from "@/crypto/authenticated-symmetric-encryption.ts";
-import { labyrinth_hpke_encrypt } from "@/crypto/public-key-encryption.ts";
-import { kdfOneKey, kdfTwoKeys } from "@/crypto/key-derivation.ts";
-import { bytesSerializerProvider } from "@/BytesSerializerProvider.ts";
+} from "../device/key-bundle/DeviceAndVirtualDeviceCommonKeyBundle";
+import { VirtualDevicePublicKeyBundle } from "../device/key-bundle/VirtualDeviceKeyBundle";
+import { Epoch, EpochWithoutId } from "../EpochStorage";
+import { ThisDevice } from "../device/device";
+import { kdfOneKey, kdfTwoKeys } from "../crypto/key-derivation";
+import { asciiStringToBytes, bytes_equal, random } from "../crypto/utils";
+import { bytesSerializerProvider } from "../BytesSerializerProvider";
+import { generateEpochDeviceMac } from "./authenticate-device-to-epoch";
+import { PublicKey } from "../crypto/keys";
+import { encryptWithRandomNonce } from "../crypto/authenticated-symmetric-encryption";
+import { labyrinth_hpke_encrypt } from "../crypto/public-key-encryption";
 
 type DeviceInEpochSerialized = {
     id: string;
