@@ -7,10 +7,10 @@ import {
     VirtualDeviceKeyBundle,
     VirtualDevicePublicKeyBundle,
     VirtualDevicePublicKeyBundleSerialized,
-} from "../key-bundle/VirtualDeviceKeyBundle";
-import { bytesSerializerProvider } from "../../BytesSerializerProvider";
+} from "../key-bundles/VirtualDeviceKeyBundle";
 import { asciiStringToBytes, cryptoAssert, random } from "../../crypto/utils";
 import { kdfTwoKeys } from "../../crypto/key-derivation";
+import { bytesSerializerProvider } from "../../BytesSerializer";
 
 export type GetVirtualDeviceRecoverySecretsResponse = {
     epochId: string;

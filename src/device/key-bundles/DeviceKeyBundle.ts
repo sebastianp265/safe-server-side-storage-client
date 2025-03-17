@@ -4,7 +4,7 @@ import {
     CommonPublicKeyBundle,
     CommonPublicKeyBundleSerialized,
 } from "./DeviceAndVirtualDeviceCommonKeyBundle";
-import { bytesSerializerProvider } from "../../BytesSerializerProvider";
+import { bytesSerializerProvider } from "../../BytesSerializer";
 
 export type DeviceKeyBundleSerialized = {
     priv: DevicePrivateKeyBundleSerialized;

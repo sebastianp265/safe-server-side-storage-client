@@ -1,17 +1,17 @@
 import {
     CommonPublicKeyBundle,
     CommonPublicKeyBundleSerialized,
-} from "../device/key-bundle/DeviceAndVirtualDeviceCommonKeyBundle";
-import { VirtualDevicePublicKeyBundle } from "../device/key-bundle/VirtualDeviceKeyBundle";
+} from "../device/key-bundles/DeviceAndVirtualDeviceCommonKeyBundle";
+import { VirtualDevicePublicKeyBundle } from "../device/key-bundles/VirtualDeviceKeyBundle";
 import { Epoch, EpochWithoutId } from "../EpochStorage";
-import { ThisDevice } from "../device/device";
+import { ThisDevice } from "../device/ThisDevice";
 import { kdfOneKey, kdfTwoKeys } from "../crypto/key-derivation";
 import { asciiStringToBytes, bytes_equal, random } from "../crypto/utils";
-import { bytesSerializerProvider } from "../BytesSerializerProvider";
 import { generateEpochDeviceMac } from "./authenticate-device-to-epoch";
 import { PublicKey } from "../crypto/keys";
 import { encryptWithRandomNonce } from "../crypto/authenticated-symmetric-encryption";
 import { labyrinth_hpke_encrypt } from "../crypto/public-key-encryption";
+import { bytesSerializerProvider } from "../BytesSerializer";
 
 type DeviceInEpochSerialized = {
     id: string;

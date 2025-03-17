@@ -1,4 +1,4 @@
-import { bytesSerializerProvider } from "./BytesSerializerProvider";
+import { bytesSerializerProvider } from "./BytesSerializer";
 
 export class EpochStorageError extends Error {
     constructor(message: string) {

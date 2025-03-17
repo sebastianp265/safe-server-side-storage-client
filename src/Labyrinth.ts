@@ -1,4 +1,4 @@
-import { ThisDevice, ThisDeviceSerialized } from "./device/device";
+import { ThisDevice, ThisDeviceSerialized } from "./device/ThisDevice";
 import { Epoch, EpochStorage, EpochStorageSerialized } from "./EpochStorage";
 import { LabyrinthServerClient } from "./labyrinth-server-client";
 import { VirtualDevice } from "./device/virtual-device/VirtualDevice";

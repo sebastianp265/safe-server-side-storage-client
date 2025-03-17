@@ -2,16 +2,16 @@ import {
     encryptVirtualDeviceRecoverySecrets,
     VirtualDeviceEncryptedRecoverySecretsSerialized,
 } from "../device/virtual-device/VirtualDeviceEncryptedRecoverySecrets";
-import { VirtualDevicePublicKeyBundleSerialized } from "../device/key-bundle/VirtualDeviceKeyBundle";
+import { VirtualDevicePublicKeyBundleSerialized } from "../device/key-bundles/VirtualDeviceKeyBundle";
 import {
     DevicePublicKeyBundle,
     DevicePublicKeyBundleSerialized,
-} from "../device/key-bundle/DeviceKeyBundle";
+} from "../device/key-bundles/DeviceKeyBundle";
 import { VirtualDevice } from "../device/virtual-device/VirtualDevice";
 import { Epoch, EpochWithoutId } from "../EpochStorage";
 import { random } from "../crypto/utils";
 import { generateEpochDeviceMac } from "./authenticate-device-to-epoch";
-import { bytesSerializerProvider } from "../BytesSerializerProvider";
+import { bytesSerializerProvider } from "../BytesSerializer";
 
 export type OpenFirstEpochBody = {
     virtualDeviceId: string;

@@ -8,7 +8,7 @@ import {
     CheckIfLabyrinthIsInitializedServerClient,
     NotifyAboutDeviceActivityServerClient,
 } from "./Labyrinth";
-import { AuthenticateDeviceToEpochAndRegisterDeviceServerClient } from "./device/device";
+import { AuthenticateDeviceToEpochAndRegisterDeviceServerClient } from "./device/ThisDevice";
 
 export type LabyrinthServerClient = OpenFirstEpochServerClient &
     OpenNewEpochBasedOnCurrentServerClient &

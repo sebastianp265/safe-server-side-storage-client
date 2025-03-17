@@ -2,17 +2,17 @@ import {
     DeviceKeyBundle,
     DeviceKeyBundleSerialized,
     DevicePublicKeyBundleSerialized,
-} from "./key-bundle/DeviceKeyBundle";
+} from "./key-bundles/DeviceKeyBundle";
 import { Epoch, EpochStorage } from "../EpochStorage";
 import { LabyrinthServerClient } from "../labyrinth-server-client";
 import { joinAllEpochs } from "../phases/join-epoch";
-import { bytesSerializerProvider } from "../BytesSerializerProvider";
 import { generateEpochDeviceMac } from "../phases/authenticate-device-to-epoch";
 import { VirtualDevice } from "./virtual-device/VirtualDevice";
 import {
     openFirstEpoch,
     OpenFirstEpochServerClient,
 } from "../phases/open-first-epoch";
+import { bytesSerializerProvider } from "../BytesSerializer";
 
 export type AuthenticateDeviceToEpochAndRegisterDeviceResponse = {
     assignedDeviceId: string;

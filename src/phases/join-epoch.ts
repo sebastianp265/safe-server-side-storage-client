@@ -1,16 +1,16 @@
 import {
     DevicePublicKeyBundle,
     DevicePublicKeyBundleSerialized,
-} from "../device/key-bundle/DeviceKeyBundle";
-import { ThisDevice } from "../device/device";
+} from "../device/key-bundles/DeviceKeyBundle";
+import { ThisDevice } from "../device/ThisDevice";
 import { VirtualDevice } from "../device/virtual-device/VirtualDevice";
 import { Epoch, EpochStorage } from "../EpochStorage";
 import { AuthenticateDeviceToEpochServerClient } from "./authenticate-device-to-epoch";
 import { kdfOneKey, kdfTwoKeys } from "../crypto/key-derivation";
 import { asciiStringToBytes, bytesToAsciiString } from "../crypto/utils";
 import { labyrinth_hpke_decrypt } from "../crypto/public-key-encryption";
-import { bytesSerializerProvider } from "../BytesSerializerProvider";
 import { decrypt } from "../crypto/authenticated-symmetric-encryption";
+import { bytesSerializerProvider } from "../BytesSerializer";
 
 class InvalidEpochStorageAuthKey extends Error {
     constructor() {
@@ -66,6 +66,7 @@ export async function joinAllEpochs(
         epochStorage,
         joinEpochServerClient,
     );
+    // TODO: Add rolling forward support
     // const chainBackwardsPromise = chainBackwards(
     //     epochStorage,
     //     joinEpochServerClient,

@@ -1,10 +1,9 @@
-import { bytesSerializerProvider } from "../../BytesSerializerProvider";
 import { EpochWithoutId } from "../../EpochStorage";
 import {
     VirtualDeviceKeyBundle,
     VirtualDevicePrivateKeyBundle,
     VirtualDevicePublicKeyBundle,
-} from "../key-bundle/VirtualDeviceKeyBundle";
+} from "../key-bundles/VirtualDeviceKeyBundle";
 import {
     decrypt,
     encryptWithRandomNonce,
@@ -15,6 +14,7 @@ import {
     bytesToAsciiString,
 } from "../../crypto/utils";
 import { PrivateKey } from "../../crypto/keys";
+import { bytesSerializerProvider } from "../../BytesSerializer";
 
 export type VirtualDeviceEncryptedRecoverySecretsSerialized = {
     encryptedEpochSequenceId: string;

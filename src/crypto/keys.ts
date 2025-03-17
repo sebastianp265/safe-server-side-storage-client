@@ -5,8 +5,8 @@ import {
     x25519,
 } from "@noble/curves/ed25519";
 import { KEY_LENGTH_BYTES } from "./key-derivation";
-import { bytesSerializerProvider } from "../BytesSerializerProvider";
 import { bytes_equal, concat, cryptoAssert } from "./utils";
+import { bytesSerializerProvider } from "../BytesSerializer";
 
 export function generateKeyPair() {
     const privateKey = PrivateKey.generate();
