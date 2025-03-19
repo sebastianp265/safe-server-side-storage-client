@@ -1,6 +1,6 @@
 {
   "name": "@sebastianp265/safe-server-side-storage-client",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Library for Confidential Server-Side Message Storage Using the Labyrinth Protocol",
   "scripts": {
     "prepack": "tsc",
