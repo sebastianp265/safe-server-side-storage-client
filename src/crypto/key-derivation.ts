@@ -37,5 +37,5 @@ function hkdfSHA256(
     info: Uint8Array,
     keyLength: number,
 ): Uint8Array {
-    return hkdf(sha256, ikm, salt, info, keyLength);
+    return hkdf(sha256, ikm, salt ?? new Uint8Array(0), info, keyLength);
 }
