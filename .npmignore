@@ -6,3 +6,4 @@ coverage
 **/**/__test__
 tsconfig.json
 .prettierrc
+phd.pdf
