@@ -2,7 +2,7 @@
 
 ## About
 
-This library was developed as part of my PhD thesis, presenting the design and implementation of a client library that enables secure storage of messages on the server side using the [Labyrinth protocol](https://engineering.fb.com/wp-content/uploads/2023/12/TheLabyrinthEncryptedMessageStorageProtocol_12-6-2023.pdf) developed by Meta.
+This library was developed as part of my [PhD thesis](https://github.com/sebastianp265/safe-server-side-storage-client/blob/main/phd.pdf), presenting the design and implementation of a client library that enables secure storage of messages on the server side using the [Labyrinth protocol](https://engineering.fb.com/wp-content/uploads/2023/12/TheLabyrinthEncryptedMessageStorageProtocol_12-6-2023.pdf) developed by Meta.
 
 The purpose of this library is to facilitate discussions, analysis, and improvements of the protocol while also detailing certain issues that may be helpful for further development.
 
